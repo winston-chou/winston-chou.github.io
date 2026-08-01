@@ -3,99 +3,291 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Personal website of Winston Chou</title>
+  <title>Winston Chou</title>
   <meta name="description" content="Personal website of Winston Chou">
   <meta name="author" content="Winston Chou">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <style type="text/css">
-  	body {
+  <style>
+    body {
+      margin: 0;
       background-color: whitesmoke;
-  		font-family: Helvetica, sans-serif;
-  	}
-    h2 {
-      font-weight: normal;
+      color: #101828;
+      font-family: Palatino, "Times New Roman", serif;
+      line-height: 1.65;
     }
-  	h3 {
-  		font-weight: normal;
-  	}
-    img {
-      width: 300px;
-    }
-    div {
-    	width: 60%;
-    	margin: auto;
-    	line-height: 175%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+
     a {
-      color: dodgerblue;
+      color: #0647c9;
     }
-    .right {
-      float: right;
-      padding-left: 20px;
+
+    header {
+      background-color: #061633;
+      color: white;
+      padding: 18px 0;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-right: 18px;
+      font-size: 15px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Palatino", "Times New Roman", serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 44px;
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #d0d7e2;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      margin-bottom: 4px;
+    }
+
+    main, .wrap {
+      width: min(900px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    section {
+      background-color: white;
+      margin: 24px 0;
+      padding: 26px;
+      border: 1px solid #dce3ee;
+      border-radius: 8px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .tagline {
+      color: #0647c9;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #dce3ee;
+    }
+
+    .caption {
+      margin-top: 0px;
+      color: #667085;
+      font-size: 12px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0 10px 10px 0;
+      padding: 8px 12px;
+      background-color: #eef4ff;
+      border: 1px solid #c7d7fe;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .highlights li {
+      background-color: #f8fbff;
+      border-left: 4px solid #0647c9;
+      padding: 14px 16px;
+    }
+
+    .compact-list li {
+      margin-bottom: 14px;
+    }
+
+    .compact-list ul {
+      margin-top: 14px;
+    }
+
+    footer {
+      color: #667085;
+      padding: 24px 0 40px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+
+      .logos img {
+        height: 28px;
+      }
+
+      .logos .wide-logo {
+        height: 21px;
+      }
+
+      .intro,
+      .highlights {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
-  <div>
-  	<h1>Winston Chou</h1>
-  </div>
- 	<div>    
-    <h2>About Me</h2>
+  <header>
+    <div class="wrap">
+      <h1>Winston Chou</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </div>
+  </header>
 
-          <p>I'm a Staff Research Scientist at Netflix with expertise on causal inference and experimentation.</p>
-          
-          <p>I enjoy working on highly intersectional teams and problems, and am proud to have published my work in leading journals and conferences in data science, political science, sociology, and economics.</p>
+  <main>
+    <section class="intro">
+      <div>
+        <p class="tagline">Researcher working on causal machine learning, experimentation, and AI for data science.</p>
+        <p>I'm a Staff Research Scientist at Netflix. I develop statistical methods and production systems for causal inference and learning from large collections of experiments.</p>
 
-          <p>Before joining Netflix, I was a Staff Data Scientist at Apple, where I helped build Siri's A/B testing platform, and a Research Scientist at Facebook, where I worked on missing data problems in ads measurement.</p>
-      
-          <p>I received my PhD in political science from Princeton University, where I was fortunate to be advised by <a href="https://scholar.princeton.edu/rdancygi/home">Rafaela Dancygier</a> and <a href="https://imai.fas.harvard.edu/">Kosuke Imai</a>.  I studied voting decisions and survey methodology and wrote a dissertation on electoral politics in Europe.</p>
-      
-          <p>My wife, <a href="http://www.katherinetmccabe.com/">Katherine McCabe</a>, teaches American politics and data science at Rutgers University.</p>
-      
-          <p>My resume can be found <a href="winston-chou-resume.pdf">here</a>.</p>
-  </div>
+        <p class="links">
+          <a href="winston-chou-resume.pdf">Resume</a>
+          <a href="https://scholar.google.com/citations?user=76ko47MAAAAJ&hl=en">Google Scholar</a>
+        </p>
+      </div>
 
-  <div style="text-align:center;">
-    <img src="kdd-2025.jpg">
-    <br><i>Accepting the Best Paper Award at KDD '25 -- a real career highlight!</i>      
-  </div>
+      <div>
+        <img class="photo" src="kdd-2025.jpg" alt="Accepting the Best Paper Award at KDD 2025">
+        <p class="caption">Accepting the Best Paper Award at KDD '25 - a real career highlight.</p>
+      </div>
+    </section>
 
-  <div>
-    <h2>Research</h2>
-    <ol reversed>
-      <li>Chou, Winston, Adrien Alexandre, Lars Olds, Yi Zhang, and Nathan Kallus. <a href="https://arxiv.org/abs/2607.22443">"A human-augmenting agentic workflow for observational causal inference."</a>  See also the <a href="https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af">Netflix Tech Blog</a> and <a href="https://github.com/Netflix-Skunkworks/oci-agent">open-source Python package.</a></li>
-      <li>Zielnicki, Kevin, Guy Aridor, Aurélien Bibaut, Allen Tran, Winston Chou, and Nathan Kallus. <a href="https://arxiv.org/abs/2511.07280">"The value of personalized recommendations: Evidence from Netflix."</a></li>
-      <ul>
-        <li>Accepted to <i>International Journal of Industrial Organization</i>.</li>
-        <li>To appear at <i>ACM Conference on Economics and Computation (EC '26)</i>.</li>
-        <li>Presented at <i>National Bureau of Economic Research (NBER) Digital Economics and AI Meeting</i>.</li>
+    <section id="about">
+      <h2>About Me</h2>
+
+      <p>I enjoy working on highly cross-functional teams and intersectional problems. I am proud to have delivered business impact while also making scholarly contributions to major conferences and journals in data science, political science, sociology, and economics.</p>
+
+      <p>Before joining Netflix, I was a Staff Data Scientist at Apple, where I helped build Siri's A/B testing platform, and a Research Scientist at Facebook, where I worked on missing data problems in ads measurement.</p>
+
+      <p>I received my PhD in political science from Princeton University, where I was fortunate to be advised by <a href="https://scholar.princeton.edu/rdancygi/home">Rafaela Dancygier</a> and <a href="https://imai.fas.harvard.edu/">Kosuke Imai</a>. I studied voting decisions and survey methodology and wrote a dissertation on electoral politics and voter choice in Europe.</p>
+
+      <p>My wife, <a href="http://www.katherinetmccabe.com/">Katherine McCabe</a>, teaches American politics and data science at Rutgers University.</p>
+    </section>
+
+    <section id="research">
+      <h2>Work Highlights</h2>
+
+      <ul class="highlights">
+        <li>
+          <h3>AI for data science</h3>
+          <p>A human-augmenting agentic workflow for observational causal inference.  See our <a href="https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af">Netflix Tech Blog post</a> and <a href="https://github.com/Netflix-Skunkworks/oci-agent">open-source Python package</a>.</p>
+        </li>
+        <li>
+          <h3>Evaluating decision rules for A/B tests</h3>
+          <p>A method to find <a href="https://dl.acm.org/doi/pdf/10.1145/3711896.3737217">better rules</a> for choosing winners in A/B tests. This paper received the KDD '25 Best Paper Award in Applied Data Science.</p>
+        </li>
+        <li>
+          <h3>Proxy metrics and north stars</h3>
+          <p>Methods for <a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3672034">learning</a> precise proxy metrics for noisy north-star outcomes and <a href="https://arxiv.org/abs/2606.21745">blending</a> them together.</p>
+        </li>
+        <li>
+          <h3>Representative causal effects</h3>
+          <p>A <a href="https://arxiv.org/pdf/2506.07462">doubly robust framework</a> for learning causal effects that generalize.</p>
+        </li>
       </ul>
-      <li>Lal, Apoorva and Winston Chou. 2026. <a href="https://arxiv.org/pdf/2506.07462">"Estimating representative causal effects with double machine learning."</a> 
-        <ul>
-          <li>To appear at <i>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases</i> (ECML PKDD '26).</li>
-          <li>Presented at <i>3rd Workshop on Causal Inference and Machine Learning in Practice</i> at KDD '25 (as "Does residuals-on-residuals regression produce representative
-            estimates of causal effects?").</li>
-        </ul>  
-      <li>Chou, Winston. 2026.  <a href="https://arxiv.org/abs/2606.21745">"Blending proxy metrics with a north star."</a> To appear at ECML PKDD '26.</li>
-      <li>Chou, Winston, Colin Gray, Nathan Kallus, Aurélien Bibaut, and Simon Ejdemyr. 2025. <a href="https://dl.acm.org/doi/pdf/10.1145/3711896.3737217">"Evaluating decision rules across many weak experiments
-        ."</a> <i>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '25).</i>  <b>Best Paper Award (Applied Data Science).</b></li>
-      <li>Bibaut, Aurélien, Winston Chou, Simon Ejdemyr, and Nathan Kallus. 2024. <a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3672034">"Learning the covariance of treatment effects across many weak experiments
-        ."</a> <i>Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24').</i></li>
-      <li>Chou, Winston. 2021. <a href="https://arxiv.org/abs/2102.03316">"Randomized controlled trials without data retention."</a> Presented at <i>Conference on Digital Experimentation (CODE@MIT)</i>.</li>
-    	<li>Chou, Winston and Rafaela Dancygier. 2021. <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/why-parties-displace-their-voters-gentrification-coalitional-change-and-the-demise-of-public-housing/DD9C48C4382889F99204E2B9191BDB24">"Why parties displace their voters: Gentrification, coalitional change, and the demise of public housing."</a> <i>American Political Science Review</i>. A nice <a href="https://politicalsciencenow.com/the-electoral-causes-and-consequences-of-housing-crises/">blog post</a> on this paper.</li>
-    	<li>Chou, Winston, Rafaela Dancygier, Naoki Egami, and Amaney Jamal. 2021. <a href="https://journals.sagepub.com/doi/abs/10.1177/0010414021997166">"Competing for loyalists? How party positioning affects populist radical right voting."</a> <i>Comparative Political Studies</i>.  Shared on the <a href="https://www.washingtonpost.com/politics/2021/10/05/germanys-far-right-party-lost-seats-last-weeks-election-heres-why/">Monkey Cage</a> blog and <a href="https://www.cnn.com/videos/tv/2021/10/17/exp-gps-1017-german-elections.cnn">CNN</a>.</li>
-	    <li>Chou, Winston, Kosuke Imai, and Bryn Rosenfeld. 2020. <a href="https://journals.sagepub.com/doi/abs/10.1177/0049124117729711">"Sensitive survey questions with auxiliary information."</a> <i>Sociological Methods & Research</i>.</li>
-    	<li>Blair, Graeme, Winston Chou, and Kosuke Imai. 2019. <a href="https://www.cambridge.org/core/journals/political-analysis/article/abs/list-experiments-with-measurement-error/C1600D850D9958F553007CBB592A28E4">"List experiments with measurement error."</a> <i>Political Analysis</i>.</li>
-    	<li>Chou, Winston. 2017. <a href="https://journals.sagepub.com/doi/abs/10.1177/0003122417690497">"Culture remains elusive: On the identification of cultural effects with instrumental variables."</a> <i>American Sociological Review</i>.</li>
-    	<li>Chou, Winston. 2016. <a href="https://academic.oup.com/sf/article-abstract/94/3/1129/2461445">"Seen like a state: How illegitimacy shapes terrorism designation."</a> <i>Social Forces</i>.</li>    	
-    </ol>
-  </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <ol reversed class="compact-list">
+        <li>Chou, Winston, Adrien Alexandre, Lars Olds, Yi Zhang, and Nathan Kallus. <a href="https://arxiv.org/abs/2607.22443">"A human-augmenting agentic workflow for observational causal inference."</a>.</li>
+
+        <li>Zielnicki, Kevin, Guy Aridor, Aurélien Bibaut, Allen Tran, Winston Chou, and Nathan Kallus. <a href="https://arxiv.org/abs/2511.07280">"The value of personalized recommendations: Evidence from Netflix."</a>
+          <ul>
+            <li>Accepted to <i>International Journal of Industrial Organization</i>.</li>
+            <li>To appear at <i>ACM Conference on Economics and Computation (EC '26)</i>.</li>
+            <li>Presented at <i>National Bureau of Economic Research (NBER) Digital Economics and AI Meeting</i> and <i>NABE East Coast Tech Economists MeetUp</i>.</li>
+          </ul>
+        </li>
+
+        <li>Lal, Apoorva and Winston Chou. 2026. <a href="https://arxiv.org/pdf/2506.07462">"Estimating representative causal effects with double machine learning."</a>
+          <ul>
+            <li>To appear at <i>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases</i> (ECML PKDD '26).</li>
+            <li>Presented at <i>3rd Workshop on Causal Inference and Machine Learning in Practice</i> at KDD '25.</li>
+          </ul>
+        </li>
+
+        <li>Chou, Winston. 2026. <a href="https://arxiv.org/abs/2606.21745">"Blending proxy metrics with a north star."</a> To appear at ECML PKDD '26.</li>
+
+        <li>Chou, Winston, Colin Gray, Nathan Kallus, Aurélien Bibaut, and Simon Ejdemyr. 2025. <a href="https://dl.acm.org/doi/pdf/10.1145/3711896.3737217">"Evaluating decision rules across many weak experiments."</a> <i>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '25).</i> <b>Best Paper Award (Applied Data Science).</b></li>
+
+        <li>Bibaut, Aurélien, Winston Chou, Simon Ejdemyr, and Nathan Kallus. 2024. <a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3672034">"Learning the covariance of treatment effects across many weak experiments."</a> <i>Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24).</i></li>
+
+        <li>Chou, Winston. 2021. <a href="https://arxiv.org/abs/2102.03316">"Randomized controlled trials without data retention."</a> Presented at <i>Conference on Digital Experimentation (CODE@MIT)</i>.</li>
+
+        <li>Chou, Winston and Rafaela Dancygier. 2021. <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/why-parties-displace-their-voters-gentrification-coalitional-change-and-the-demise-of-public-housing/DD9C48C4382889F99204E2B9191BDB24">"Why parties displace their voters: Gentrification, coalitional change, and the demise of public housing."</a> <i>American Political Science Review</i>. A nice <a href="https://politicalsciencenow.com/the-electoral-causes-and-consequences-of-housing-crises/">blog post</a> on this paper.</li>
+
+        <li>Chou, Winston, Rafaela Dancygier, Naoki Egami, and Amaney Jamal. 2021. <a href="https://journals.sagepub.com/doi/abs/10.1177/0010414021997166">"Competing for loyalists? How party positioning affects populist radical right voting."</a> <i>Comparative Political Studies</i>. Covered by the <a href="https://www.washingtonpost.com/politics/2021/10/05/germanys-far-right-party-lost-seats-last-weeks-election-heres-why/">Monkey Cage</a> blog and <a href="https://www.cnn.com/videos/tv/2021/10/17/exp-gps-1017-german-elections.cnn">CNN</a>.</li>
+
+        <li>Chou, Winston, Kosuke Imai, and Bryn Rosenfeld. 2020. <a href="https://journals.sagepub.com/doi/abs/10.1177/0049124117729711">"Sensitive survey questions with auxiliary information."</a> <i>Sociological Methods &amp; Research</i>.</li>
+
+        <li>Blair, Graeme, Winston Chou, and Kosuke Imai. 2019. <a href="https://www.cambridge.org/core/journals/political-analysis/article/abs/list-experiments-with-measurement-error/C1600D850D9958F553007CBB592A28E4">"List experiments with measurement error."</a> <i>Political Analysis</i>.</li>
+
+        <li>Chou, Winston. 2017. <a href="https://journals.sagepub.com/doi/abs/10.1177/0003122417690497">"Culture remains elusive: On the identification of cultural effects with instrumental variables."</a> <i>American Sociological Review</i>.</li>
+
+        <li>Chou, Winston. 2016. <a href="https://academic.oup.com/sf/article-abstract/94/3/1129/2461445">"Seen like a state: How illegitimacy shapes terrorism designation."</a> <i>Social Forces</i>.</li>
+      </ol>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <ul class="compact-list">
+        <li><b>Netflix</b>, Staff Research Scientist, 2022 - Present. Causal inference, experimentation, and personalization.</li>
+        <li><b>Apple</b>, Staff Data Scientist, 2020 - 2022. Founding data scientist on the experimentation platform for Siri.</li>
+        <li><b>Meta (Facebook)</b>, Research Scientist, 2018 - 2020. Advertising measurement and causal inference with missing data.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    Last updated: July 2026
+  </footer>
 </body>
 </html>
